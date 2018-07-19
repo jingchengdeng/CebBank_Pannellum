@@ -881,7 +881,7 @@ function onDocumentTouchMove(event) {
         // we introduce a dynamic pan speed coefficient.
         //
         // Currently this seems to *roughly* keep initial drag/pan start position close to
-        // the user's finger while panning regardless of zoom level / config.hfov value.
+        // the user's finger while panning regardless of zoom level / config.hfov value .
         var touchmovePanSpeedCoeff = (config.hfov / 360) * config.touchPanSpeedCoeffFactor * 0.5;
 
         var yaw = (onPointerDownPointerX - clientX) * touchmovePanSpeedCoeff + onPointerDownYaw;
