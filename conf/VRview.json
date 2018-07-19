@@ -2,7 +2,8 @@
   "default": {
     "autoLoad": true,
     "firstScene": "全景1",
-    "sceneFadeDuration": 2000
+    "sceneFadeDuration": 2000,
+    "orientationOnByDefault": true
   },
 
   "scenes": {

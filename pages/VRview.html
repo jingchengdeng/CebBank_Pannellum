@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>VRview</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 <iframe id="iframepage" width="100%" height="645px" allowfullscreen style="border-style:none;"
@@ -13,13 +18,12 @@
 <script type="text/javascript">
     function changeFrameHeight() {
         var ifm = document.getElementById("iframepage");
-        ifm.height = document.documentElement.clientHeight - 16; // pannellum.css里默认margin上下各有8
+        ifm.height = document.documentElement.clientHeight - 4; // pannellum.css里默认margin上下各有8
     }
 
     window.onresize = function () {
         changeFrameHeight();
     }
 </script>
-
 </body>
 </html>
