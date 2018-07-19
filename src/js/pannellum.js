@@ -151,11 +151,11 @@ dragFix.className = 'pnlm-dragfix';
 uiContainer.appendChild(dragFix);
 
 // Display about information on right click
-var aboutMsg = document.createElement('span');
-aboutMsg.className = 'pnlm-about-msg';
-aboutMsg.innerHTML = '<a href="https://pannellum.org/" target="_blank">Pannellum</a>';
-uiContainer.appendChild(aboutMsg);
-dragFix.addEventListener('contextmenu', aboutMessage);
+// var aboutMsg = document.createElement('span');
+// aboutMsg.className = 'pnlm-about-msg';
+// aboutMsg.innerHTML = '<a href="https://pannellum.org/" target="_blank">Pannellum</a>';
+// uiContainer.appendChild(aboutMsg);
+// dragFix.addEventListener('contextmenu', aboutMessage);
 
 // Create info display
 var infoDisplay = {};
@@ -814,8 +814,8 @@ function onDocumentTouchStart(event) {
 
     // Turn off auto-rotation if enabled
     stopAnimation();
-
-    stopOrientation();
+    // 触摸不停止陀螺仪
+    //stopOrientation();
     config.roll = 0;
 
     speed.hfov = 0;
@@ -1740,9 +1740,7 @@ function createHotSpot(hs) {
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
     if (hs.clickHandlerFunc) {
-        div.addEventListener('click', function(e) {
-            hs.clickHandlerFunc(e, hs.clickHandlerArgs);
-        }, 'false');
+        div.addEventListener('touchstart', function () { });
         div.className += ' pnlm-pointer';
         span.className += ' pnlm-pointer';
     }
