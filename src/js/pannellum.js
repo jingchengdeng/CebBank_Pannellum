@@ -1740,7 +1740,7 @@ function createHotSpot(hs) {
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
     if (hs.clickHandlerFunc) {
-        div.addEventListener('touchstart', function () { });
+        div.addEventListener('touchstart', function () {div.preventDefault()});
         div.className += ' pnlm-pointer';
         span.className += ' pnlm-pointer';
     }
