@@ -19,5 +19,63 @@
 <script type="text/javascript" src="../js/RequestAnimationFrame.js"></script>
 <script type="text/javascript" src="../js/pannellum.js"></script>
 <script type="text/javascript" src="standalone.js"></script>
+<script>
+  pannellum.viewer('container',{"default": {
+          "autoLoad": true,
+          "firstScene": "全景1",
+          "sceneFadeDuration": 2000,
+          "orientationOnByDefault": true
+      },
+
+      "scenes": {
+          "全景1": {
+              "type": "multires",
+              "multiRes": {
+                  "basePath": "../../files/VR_1",
+                  "path": "/%l/%s%y_%x",
+                  "fallbackPath": "/fallback/%s",
+                  "extension": "jpg",
+                  "tileResolution": 512,
+                  "maxLevel": 2,
+                  "cubeResolution": 632
+              },
+              "hotSpots": [
+                  {
+                      "pitch": -12,
+                      "yaw": 190,
+                      "type": "info",
+                      "image": "../files/images/post_1.jpg"
+                  },
+                  {
+                      "pitch": -10,
+                      "yaw": -50,
+                      "type": "info",
+                      "video": "../files/videos/video_1.mp4"
+                  },
+                  {
+                      "pitch": -10,
+                      "yaw": -80,
+                      "type": "scene",
+                      "text": "前往展厅2",
+                      "sceneId": "全景2"
+                  }
+              ]
+          },
+
+          "全景2": {
+              "panorama": "../files/examplepano.jpg",
+              "hotSpots": [
+                  {
+                      "pitch": 0,
+                      "yaw": 120,
+                      "type": "scene",
+                      "text": "前往展厅1",
+                      "sceneId": "全景1"
+                  }
+              ]
+          }
+      }
+  });
+</script>
 </body>
 </html>
