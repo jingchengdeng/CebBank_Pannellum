@@ -372,11 +372,11 @@ div.pnlm-tooltip span {
     cursor: default;
 }
 div.pnlm-tooltip:hover span{
-    visibility: hidden;
-}
-div.pnlm-tooltip:active span{
     visibility: visible;
 }
+/*div.pnlm-tooltip:active span{*/
+    /*visibility: visible;*/
+/*}*/
 div.pnlm-tooltip:hover span:after {
      content: '';
      position: absolute;
