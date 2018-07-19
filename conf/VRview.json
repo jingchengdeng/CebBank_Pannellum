@@ -1,13 +1,12 @@
 {
   "default": {
-    "author": "",
+    "autoLoad": true,
     "firstScene": "全景1",
     "sceneFadeDuration": 2000
   },
 
   "scenes": {
     "全景1": {
-      "title": "",
       "type": "multires",
       "multiRes": {
         "basePath": "../files/VR_1",
@@ -42,7 +41,6 @@
     },
 
     "全景2": {
-      "title": "",
       "panorama": "../files/examplepano.jpg",
       "hotSpots": [
         {
