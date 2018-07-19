@@ -18,6 +18,10 @@
     line-height: 1.4;
     contain: content;
     touch-action: none;
+    -webkit-tap-highlight-color:transparent;    //方法一
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  //方法二
+    tap-highlight-color: rgba(0, 0, 0, 0);  //方法三
+
 }
 
 .pnlm-container * {
