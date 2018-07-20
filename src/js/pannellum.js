@@ -497,10 +497,10 @@ function onImageLoad() {
         } else {
             dragFix.addEventListener('touchstart', onDocumentTouchStart, false);
             dragFix.addEventListener('touchmove', onDocumentTouchMove, false);
-            //dragFix.addEventListener('touchend', onDocumentTouchEnd, false);
-            dragFix.addEventListener('touchend', function (e) {
-                e.preventDefault();
-            }, false);
+            dragFix.addEventListener('touchend', onDocumentTouchEnd, false);
+            // dragFix.addEventListener('touchend', function (e) {
+            //     e.preventDefault();
+            // }, false);
 
         }
 
@@ -1706,7 +1706,7 @@ function createHotSpot(hs) {
         var image = document.createElement('img');
         image.src = sanitizeURL(p);
         //fix the width of image type to 16:9
-        image.style.width = '500px';
+        image.style.width = '100px';
         image.style.paddingTop = '5px';
         renderContainer.appendChild(div);
         a.appendChild(image);
