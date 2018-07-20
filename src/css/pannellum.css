@@ -374,7 +374,7 @@ div.pnlm-tooltip span {
 /*div.pnlm-tooltip:hover span{*/
     /*visibility: visible;*/
 /*}*/
-div.pnlm-tooltip:active span{
+div.pnlm-tooltip:hover span{
     visibility: visible;
 }
 
@@ -394,7 +394,7 @@ div.pnlm-tooltip:active span{
      /*left: -10px;*/
      /*margin: 0 50%;*/
 /*}*/
-div.pnlm-tooltip:active span:after {
+div.pnlm-tooltip:hover span:after {
     content: '';
     position: absolute;
     width: 0;

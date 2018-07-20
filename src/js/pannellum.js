@@ -497,7 +497,11 @@ function onImageLoad() {
         } else {
             dragFix.addEventListener('touchstart', onDocumentTouchStart, false);
             dragFix.addEventListener('touchmove', onDocumentTouchMove, false);
-            dragFix.addEventListener('touchend', onDocumentTouchEnd, false);
+            //dragFix.addEventListener('touchend', onDocumentTouchEnd, false);
+            dragFix.addEventListener('touchend', function (e) {
+                e.preventDefault();
+            }, false);
+
         }
 
         // Deal with MS pointer events
@@ -1702,8 +1706,8 @@ function createHotSpot(hs) {
         var image = document.createElement('img');
         image.src = sanitizeURL(p);
         //fix the width of image type to 16:9
-        image.style.width = '720px';
-        //image.style.paddingTop = '405px';
+        image.style.width = '500px';
+        image.style.paddingTop = '5px';
         renderContainer.appendChild(div);
         a.appendChild(image);
         span.style.maxWidth = 'initial';
@@ -1732,7 +1736,13 @@ function createHotSpot(hs) {
 
     if (hs.createTooltipFunc) {
         hs.createTooltipFunc(div, hs.createTooltipArgs);
-    } else if (hs.text || hs.video || hs.image) {
+    } else if (hs.text || hs.image) {
+        div.classList.add('pnlm-tooltip');
+        div.appendChild(span);
+        span.style.width = span.scrollWidth - 20 + 'px';
+        span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
+        span.style.marginTop = -span.scrollHeight - 150 + 'px';
+    } else if (hs.video) {
         div.classList.add('pnlm-tooltip');
         div.appendChild(span);
         span.style.width = span.scrollWidth - 20 + 'px';
