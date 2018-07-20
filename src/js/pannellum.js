@@ -815,7 +815,7 @@ function onDocumentTouchStart(event) {
     // Turn off auto-rotation if enabled
     stopAnimation();
     // 触摸不停止陀螺仪
-    //stopOrientation();
+    stopOrientation();
     config.roll = 0;
 
     speed.hfov = 0;
