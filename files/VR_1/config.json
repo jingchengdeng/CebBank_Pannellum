@@ -1,12 +1,12 @@
 {
+    "hfov": 100.0,
     "type": "multires",
-    
     "multiRes": {
         "path": "/%l/%s%y_%x",
         "fallbackPath": "/fallback/%s",
-        "extension": "jpg",
+        "extension": "png",
         "tileResolution": 512,
-        "maxLevel": 2,
-        "cubeResolution": 632
+        "maxLevel": 4,
+        "cubeResolution": 4000
     }
 }

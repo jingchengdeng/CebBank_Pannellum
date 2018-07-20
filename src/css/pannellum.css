@@ -18,6 +18,10 @@
     line-height: 1.4;
     contain: content;
     touch-action: none;
+    -webkit-tap-highlight-color:transparent;    //方法一
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  //方法二
+    tap-highlight-color: rgba(0, 0, 0, 0);  //方法三
+
 }
 
 .pnlm-container * {
@@ -343,6 +347,7 @@
     height: 26px;
     width: 26px;
     border-radius: 13px;
+
 }
 .pnlm-hotspot:hover {
     background-color: rgba(255,255,255,0.2);
@@ -365,10 +370,32 @@ div.pnlm-tooltip span {
     padding: 5px 10px;
     margin-left: -220px;
     cursor: default;
+    transition: 10s;
 }
+/*div.pnlm-tooltip:hover span{*/
+    /*visibility: visible;*/
+/*}*/
 div.pnlm-tooltip:hover span{
     visibility: visible;
+    transition: 5s;
 }
+
+/*div.pnlm-tooltip:active span{*/
+    /*visibility: visible;*/
+/*}*/
+
+/*div.pnlm-tooltip:hover span:after {*/
+     /*content: '';*/
+     /*position: absolute;*/
+     /*width: 0;*/
+     /*height: 0;*/
+     /*border-width: 10px;*/
+     /*border-style: solid;*/
+     /*border-color: rgba(0,0,0,0.7) transparent transparent transparent;*/
+     /*bottom: -20px;*/
+     /*left: -10px;*/
+     /*margin: 0 50%;*/
+/*}*/
 div.pnlm-tooltip:hover span:after {
     content: '';
     position: absolute;
@@ -380,6 +407,7 @@ div.pnlm-tooltip:hover span:after {
     bottom: -20px;
     left: -10px;
     margin: 0 50%;
+    transition: 5s;
 }
 
 .pnlm-compass {
@@ -391,7 +419,7 @@ div.pnlm-tooltip:hover span:after {
     border-radius: 25px;
     background-image: url('img/compass.svg');
     cursor: default;
-    display: none;
+    display: inline;
 }
 
 .pnlm-world {
