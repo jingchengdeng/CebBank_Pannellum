@@ -1741,7 +1741,7 @@ function createHotSpot(hs) {
         div.appendChild(span);
         span.style.width = span.scrollWidth - 20 + 'px';
         span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
-        span.style.marginTop = -span.scrollHeight - 150 + 'px';
+        span.style.marginTop = -span.scrollHeight - 350 + 'px';
     } else if (hs.video) {
         div.classList.add('pnlm-tooltip');
         div.appendChild(span);
