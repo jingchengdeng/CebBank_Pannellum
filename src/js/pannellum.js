@@ -48,7 +48,7 @@ var config,
     onPointerDownYaw = 0,
     onPointerDownPitch = 0,
     keysDown = new Array(10),
-    fullscreenActive = false,
+    fullscreenActive = true,
     loaded,
     error = false,
     isTimedOut = false,
@@ -70,9 +70,9 @@ var config,
     hotspotsCreated = false;
 
 var defaultConfig = {
-    hfov: 100,
-    minHfov: 50,
-    maxHfov: 120,
+    hfov: 50,
+    minHfov: 20,
+    maxHfov: 70,
     pitch: 0,
     minPitch: undefined,
     maxPitch: undefined,
@@ -1706,8 +1706,8 @@ function createHotSpot(hs) {
         var image = document.createElement('img');
         image.src = sanitizeURL(p);
         //fix the width of image type to 16:9
-        image.style.width = '100px';
-        image.style.paddingTop = '5px';
+        image.style.width = '400px';
+        // image.style.paddingTop = '5px';
         renderContainer.appendChild(div);
         a.appendChild(image);
         span.style.maxWidth = 'initial';
@@ -1741,7 +1741,7 @@ function createHotSpot(hs) {
         div.appendChild(span);
         span.style.width = span.scrollWidth - 20 + 'px';
         span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
-        span.style.marginTop = -span.scrollHeight - 350 + 'px';
+        span.style.marginTop = -span.scrollHeight - 280 + 'px';
     } else if (hs.video) {
         div.classList.add('pnlm-tooltip');
         div.appendChild(span);
@@ -1749,9 +1749,10 @@ function createHotSpot(hs) {
         span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
+    //working DJC
     if (hs.clickHandlerFunc) {
-        div.addEventListener('click', function(e) {
-            hs.clickHandlerFunc(e, hs.clickHandlerArgs);
+        div.addEventListener('touchstart', function(e) {
+            // hs.clickHandlerFunc(e, hs.clickHandlerArgs);
         }, 'false');
         div.className += ' pnlm-pointer';
         span.className += ' pnlm-pointer';
