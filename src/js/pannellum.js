@@ -1736,12 +1736,18 @@ function createHotSpot(hs) {
 
     if (hs.createTooltipFunc) {
         hs.createTooltipFunc(div, hs.createTooltipArgs);
-    } else if (hs.text || hs.image) {
+    } else if (hs.text) {
         div.classList.add('pnlm-tooltip');
         div.appendChild(span);
         span.style.width = span.scrollWidth - 20 + 'px';
         span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
-        span.style.marginTop = -span.scrollHeight - 280 + 'px';
+        span.style.marginTop = -span.scrollHeight - 12 + 'px';
+    }else if (hs.image) {
+            div.classList.add('pnlm-tooltip');
+            div.appendChild(span);
+            span.style.width = span.scrollWidth - 20 + 'px';
+            span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
+            span.style.marginTop = -300 + 'px';
     } else if (hs.video) {
         div.classList.add('pnlm-tooltip');
         div.appendChild(span);
