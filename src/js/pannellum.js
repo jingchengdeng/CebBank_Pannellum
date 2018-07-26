@@ -70,7 +70,7 @@ var config,
     hotspotsCreated = false;
 
 var defaultConfig = {
-    hfov: 50,
+    hfov: 70,
     minHfov: 20,
     maxHfov: 70,
     pitch: 0,
