@@ -558,7 +558,7 @@
 			 */
 			actions : function () {
 				var $this = this,
-					action = 'touchend click'; // Just detect for both event types to allow for multi-input
+					action = ' click'; // Just detect for both event types to allow for multi-input
 
 				if ( elements.length < 2 ) {
 
