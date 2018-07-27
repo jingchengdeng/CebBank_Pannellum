@@ -558,7 +558,7 @@
 			 */
 			actions : function () {
 				var $this = this,
-					action = ' click'; // Just detect for both event types to allow for multi-input
+					action = 'touchend click'; // Just detect for both event types to allow for multi-input
 
 				if ( elements.length < 2 ) {
 
@@ -584,7 +584,8 @@
 					} );
 				}
 
-				$( '#swipebox-close' ).bind( action, function() {
+				$( '#swipebox-close' ).bind( action, function(event) {
+					event.preventDefault();
 					$this.closeSlide();
 				} );
 			},
