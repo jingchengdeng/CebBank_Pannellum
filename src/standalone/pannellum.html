@@ -1,288 +1,317 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>光大银行金融展网上展厅</title>
-  <link type="text/css" rel="Stylesheet" href="../css/pannellum.css"/>
-  <link type="text/css" rel="Stylesheet" href="standalone.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光大银行金融展网上展厅</title>
+    <link type="text/css" rel="Stylesheet" href="../css/pannellum.css"/>
+    <link type="text/css" rel="Stylesheet" href="standalone.css"/>
 </head>
 <body>
 <div id="container">
-  <noscript>
-    <div class="pnlm-info-box">
-      <p>Javascript is required to view this panorama.<br>(It could be worse; you could need a plugin.)</p>
-    </div>
-  </noscript>
+    <noscript>
+        <div class="pnlm-info-box">
+            <p>Javascript is required to view this panorama.<br>(It could be worse; you could need a plugin.)</p>
+        </div>
+    </noscript>
 </div>
 <script type="text/javascript" src="../js/libpannellum.js"></script>
 <script type="text/javascript" src="../js/RequestAnimationFrame.js"></script>
 <script type="text/javascript" src="../js/pannellum.js"></script>
 <script type="text/javascript" src="standalone.js"></script>
 <!--<script>-->
-    <!--document.body.addEventListener('touchstart', function () { });-->
+<!--document.body.addEventListener('touchstart', function () { });-->
 <!--</script>-->
 <script>
 
-  pannellum.viewer('container',{"default": {
-          "autoLoad": true,
-          "firstScene": "全景1",
-          "sceneFadeDuration": 2000,
-          "orientationOnByDefault": true,
-          "hotSpotDebug": true
-      },
+    pannellum.viewer('container', {
+        "default": {
+            "autoLoad": true,
+            "firstScene": "全景1",
+            "sceneFadeDuration": 2000,
+            "orientationOnByDefault": true,
+            "hotSpotDebug": true
+        },
 
-      "scenes": {
-          "全景1": {
-              "type": "multires",
-              "pitch": -8.5,
-              "yaw": -34.5,
-              "multiRes": {
-                  "basePath": "../../files/VR_1",
-                  "path": "/%l/%s%y_%x",
-                  "fallbackPath": "/fallback/%s",
-                  "extension": "png",
-                  "tileResolution": 512,
-                  "maxLevel": 4,
-                  "cubeResolution": 4000,
+        "scenes": {
+            "全景1": {
+                "type": "multires",
+                "pitch": -8.5,
+                "yaw": -34.5,
+                "multiRes": {
+                    "basePath": "../../files/VR_1",
+                    "path": "/%l/%s%y_%x",
+                    "fallbackPath": "/fallback/%s",
+                    "extension": "png",
+                    "tileResolution": 512,
+                    "maxLevel": 4,
+                    "cubeResolution": 4000,
 
 
-              },
-              "hotSpots": [
-                  {
-                      "pitch": -12,
-                      "yaw": 190,
-                      "type": "info",
-                      "URL": "../../pages/test1.html"
-                  },
-                  {
-                      "pitch": -10,
-                      "yaw": -50,
-                      "type": "info",
-                      "URL": "../../pages/test1.html"
-                  },
-                  {
-                      "pitch": -13.33,
-                      "yaw": 27.86,
-                      "type": "scene",
-                      "text": "前往展厅2",
-                      "sceneId": "全景2"
-                  },
-                  {
-                      "pitch": -16.93,
-                      "yaw": 3.02,
-                      "type": "scene",
-                      "text": "前往展厅4",
-                      "sceneId": "全景4"
-                  }
-              ]
-          },
+                },
+                "hotSpots": [
+                    {
+                        "pitch": -12,
+                        "yaw": 190,
+                        "type": "info",
+                        "URL": "../../pages/test1.html"
+                    },
+                    {
+                        "pitch": -10,
+                        "yaw": -50,
+                        "type": "info",
+                        "URL": "../../pages/test1.html"
+                    },
+                    {
+                        "pitch": -13.33,
+                        "yaw": 27.86,
+                        "type": "scene",
+                        "text": "前往展厅2",
+                        "sceneId": "全景2"
+                    },
+                    {
+                        "pitch": -16.93,
+                        "yaw": 3.02,
+                        "type": "scene",
+                        "text": "前往展厅4",
+                        "sceneId": "全景4"
+                    },
+                    // {
+                    //     "pitch": -9.90,
+                    //     "yaw": 2.51,
+                    //     "type": "scene",
+                    //     "text": "前往展厅6",
+                    //     "sceneId": "全景6"
+                    // }
+                ]
+            },
 
-          "全景2": {
-              "type": "multires",
-              "pitch": 0,
-              "yaw": 0,
-              "multiRes": {
-                  "basePath": "../../files/VR_2",
-                  "path": "/%l/%s%y_%x",
-                  "fallbackPath": "/fallback/%s",
-                  "extension": "png",
-                  "tileResolution": 512,
-                  "maxLevel": 4,
-                  "cubeResolution": 4000
-              },
-              "hotSpots": [
-                  {
-                      "pitch": -11.053,
-                      "yaw": -84.63,
-                      "type": "scene",
-                      "text": "前往展厅1",
-                      "sceneId": "全景1"
-                  },
-                  {
-                      "pitch": -15.36,
-                      "yaw": 83.99,
-                      "type": "scene",
-                      "text": "前往展厅3",
-                      "sceneId": "全景3"
-                  },
-                  {
-                      "pitch": -16.64,
-                      "yaw": -44.56,
-                      "type": "scene",
-                      "text": "前往展厅4",
-                      "sceneId": "全景4"
-                  },
-                  {
-                      "pitch": -17.29,
-                      "yaw": 47.77,
-                      "type": "scene",
-                      "text": "前往展厅5",
-                      "sceneId": "全景5"
-                  }
-              ]
-          },
+            "全景2": {
+                "type": "multires",
+                "pitch": 0,
+                "yaw": 0,
+                "multiRes": {
+                    "basePath": "../../files/VR_2",
+                    "path": "/%l/%s%y_%x",
+                    "fallbackPath": "/fallback/%s",
+                    "extension": "png",
+                    "tileResolution": 512,
+                    "maxLevel": 4,
+                    "cubeResolution": 4000
+                },
+                "hotSpots": [
+                    {
+                        "pitch": -11.053,
+                        "yaw": -84.63,
+                        "type": "scene",
+                        "text": "前往展厅1",
+                        "sceneId": "全景1"
+                    },
+                    {
+                        "pitch": -15.36,
+                        "yaw": 83.99,
+                        "type": "scene",
+                        "text": "前往展厅3",
+                        "sceneId": "全景3"
+                    },
+                    {
+                        "pitch": -16.64,
+                        "yaw": -44.56,
+                        "type": "scene",
+                        "text": "前往展厅4",
+                        "sceneId": "全景4"
+                    },
+                    {
+                        "pitch": -17.29,
+                        "yaw": 47.77,
+                        "type": "scene",
+                        "text": "前往展厅5",
+                        "sceneId": "全景5"
+                    }
+                ]
+            },
 
-          "全景3": {
-              "type": "multires",
-              "pitch": 2.387,
-              "yaw": 140.61,
-              "multiRes": {
-                  "basePath": "../../files/VR_3",
-                  "path": "/%l/%s%y_%x",
-                  "fallbackPath": "/fallback/%s",
-                  "extension": "png",
-                  "tileResolution": 512,
-                  "maxLevel": 4,
-                  "cubeResolution": 4000
-              },
-              "hotSpots": [
-                  {
-                      "pitch": -12.66,
-                      "yaw": -26.47,
-                      "type": "scene",
-                      "text": "前往展厅2",
-                      "sceneId": "全景2"
-                  },
-                  {
-                      "pitch": -19.44,
-                      "yaw": 17.43,
-                      "type": "scene",
-                      "text": "前往展厅5",
-                      "sceneId": "全景5"
-                  }
-              ]
-          },
+            "全景3": {
+                "type": "multires",
+                "pitch": 2.387,
+                "yaw": 140.61,
+                "multiRes": {
+                    "basePath": "../../files/VR_3",
+                    "path": "/%l/%s%y_%x",
+                    "fallbackPath": "/fallback/%s",
+                    "extension": "png",
+                    "tileResolution": 512,
+                    "maxLevel": 4,
+                    "cubeResolution": 4000
+                },
+                "hotSpots": [
+                    {
+                        "pitch": -12.66,
+                        "yaw": -26.47,
+                        "type": "scene",
+                        "text": "前往展厅2",
+                        "sceneId": "全景2"
+                    },
+                    {
+                        "pitch": -19.44,
+                        "yaw": 17.43,
+                        "type": "scene",
+                        "text": "前往展厅5",
+                        "sceneId": "全景5"
+                    },
+                    {
+                        "pitch": -7.88,
+                        "yaw": 7.87,
+                        "type": "scene",
+                        "text": "前往展厅6",
+                        "sceneId": "全景6"
+                    }
+                ]
+            },
 
-          "全景4": {
-              "type": "multires",
-              "pitch": -5.45,
-              "yaw": 0.58,
-              "multiRes": {
-                  "basePath": "../../files/VR_4",
-                  "path": "/%l/%s%y_%x",
-                  "fallbackPath": "/fallback/%s",
-                  "extension": "png",
-                  "tileResolution": 512,
-                  "maxLevel": 4,
-                  "cubeResolution": 4000
-              },
-              "hotSpots": [
-                  {
-                      "pitch": -14.02,
-                      "yaw": 132.99,
-                      "type": "scene",
-                      "text": "前往展厅1",
-                      "sceneId": "全景1"
-                  },
-                  {
-                      "pitch": -16.01,
-                      "yaw": 38.02,
-                      "type": "scene",
-                      "text": "前往展厅2",
-                      "sceneId": "全景2"
-                  },
-                  {
-                      "pitch": -15.16,
-                      "yaw": -36.48,
-                      "type": "scene",
-                      "text": "前往展厅6",
-                      "sceneId": "全景6"
-                  },
-                  {
-                      "pitch": -22.63,
-                      "yaw": -112.32,
-                      "type": "scene",
-                      "text": "前往展厅7",
-                      "sceneId": "全景7"
-                  }
-              ]
-          },
+            "全景4": {
+                "type": "multires",
+                "pitch": -5.45,
+                "yaw": 0.58,
+                "multiRes": {
+                    "basePath": "../../files/VR_4",
+                    "path": "/%l/%s%y_%x",
+                    "fallbackPath": "/fallback/%s",
+                    "extension": "png",
+                    "tileResolution": 512,
+                    "maxLevel": 4,
+                    "cubeResolution": 4000
+                },
+                "hotSpots": [
+                    {
+                        "pitch": -14.02,
+                        "yaw": 132.99,
+                        "type": "scene",
+                        "text": "前往展厅1",
+                        "sceneId": "全景1"
+                    },
+                    {
+                        "pitch": -16.01,
+                        "yaw": 38.02,
+                        "type": "scene",
+                        "text": "前往展厅2",
+                        "sceneId": "全景2"
+                    },
+                    {
+                        "pitch": -15.16,
+                        "yaw": -36.48,
+                        "type": "scene",
+                        "text": "前往展厅6",
+                        "sceneId": "全景6"
+                    },
+                    {
+                        "pitch": -22.63,
+                        "yaw": -112.32,
+                        "type": "scene",
+                        "text": "前往展厅7",
+                        "sceneId": "全景7"
+                    }
+                ]
+            },
 
-          "全景5": {
-              "type": "multires",
-              "pitch": -4.27,
-              "yaw": 0.54,
-              "multiRes": {
-                  "basePath": "../../files/VR_5",
-                  "path": "/%l/%s%y_%x",
-                  "fallbackPath": "/fallback/%s",
-                  "extension": "png",
-                  "tileResolution": 512,
-                  "maxLevel": 4,
-                  "cubeResolution": 4000
-              },
-              "hotSpots": [
-                  {
-                      "pitch": -14.63,
-                      "yaw": -30.43,
-                      "type": "scene",
-                      "text": "前往展厅2",
-                      "sceneId": "全景2"
-                  },
-                  {
-                      "pitch": -22.95,
-                      "yaw": -108.69,
-                      "type": "scene",
-                      "text": "前往展厅3",
-                      "sceneId": "全景3"
-                  },
-                  {
-                      "pitch": -12.82,
-                      "yaw": 33.46,
-                      "type": "scene",
-                      "text": "前往展厅6",
-                      "sceneId": "全景6"
-                  }
-              ]
-          },
+            "全景5": {
+                "type": "multires",
+                "pitch": -4.27,
+                "yaw": 0.54,
+                "multiRes": {
+                    "basePath": "../../files/VR_5",
+                    "path": "/%l/%s%y_%x",
+                    "fallbackPath": "/fallback/%s",
+                    "extension": "png",
+                    "tileResolution": 512,
+                    "maxLevel": 4,
+                    "cubeResolution": 4000
+                },
+                "hotSpots": [
+                    {
+                        "pitch": -14.63,
+                        "yaw": -30.43,
+                        "type": "scene",
+                        "text": "前往展厅2",
+                        "sceneId": "全景2"
+                    },
+                    {
+                        "pitch": -22.95,
+                        "yaw": -108.69,
+                        "type": "scene",
+                        "text": "前往展厅3",
+                        "sceneId": "全景3"
+                    },
+                    {
+                        "pitch": -12.82,
+                        "yaw": 33.46,
+                        "type": "scene",
+                        "text": "前往展厅6",
+                        "sceneId": "全景6"
+                    }
+                ]
+            },
 
-          "全景6": {
-              "type": "multires",
-              "pitch": 0,
-              "yaw": 0,
-              "multiRes": {
-                  "basePath": "../../files/VR_2",
-                  "path": "/%l/%s%y_%x",
-                  "fallbackPath": "/fallback/%s",
-                  "extension": "png",
-                  "tileResolution": 512,
-                  "maxLevel": 4,
-                  "cubeResolution": 4000
-              },
-              "hotSpots": [
-                  {
-                      "pitch": -11.053,
-                      "yaw": -84.63,
-                      "type": "scene",
-                      "text": "前往展厅1",
-                      "sceneId": "全景1"
-                  },
-                  {
-                      "pitch": -15.36,
-                      "yaw": 83.99,
-                      "type": "scene",
-                      "text": "前往展厅3",
-                      "sceneId": "全景3"
-                  },
-                  {
-                      "pitch": -16.64,
-                      "yaw": -44.56,
-                      "type": "scene",
-                      "text": "前往展厅4",
-                      "sceneId": "全景4"
-                  },
-                  {
-                      "pitch": -17.29,
-                      "yaw": 47.77,
-                      "type": "scene",
-                      "text": "前往展厅5",
-                      "sceneId": "全景5"
-                  }
-              ]
-          },
-      }
-  });
+            "全景6": {
+                "type": "multires",
+                "pitch": 0,
+                "yaw": 0,
+                "multiRes": {
+                    "basePath": "../../files/VR_6",
+                    "path": "/%l/%s%y_%x",
+                    "fallbackPath": "/fallback/%s",
+                    "extension": "png",
+                    "tileResolution": 512,
+                    "maxLevel": 4,
+                    "cubeResolution": 4000
+                },
+                "hotSpots": [
+                    // {
+                    //     "pitch": -9.05,
+                    //     "yaw": 42.43,
+                    //     "type": "scene",
+                    //     "text": "前往展厅1",
+                    //     "sceneId": "全景1"
+                    // },
+                    {
+                        "pitch": -9.57,
+                        "yaw": -39.83,
+                        "type": "scene",
+                        "text": "前往展厅3",
+                        "sceneId": "全景3"
+                    },
+                    {
+                        "pitch": -18.52,
+                        "yaw": 36.54,
+                        "type": "scene",
+                        "text": "前往展厅4",
+                        "sceneId": "全景4"
+                    },
+                    {
+                        "pitch": -18.07,
+                        "yaw": -39.75,
+                        "type": "scene",
+                        "text": "前往展厅5",
+                        "sceneId": "全景5"
+                    },
+                    {
+                        "pitch": -21.04,
+                        "yaw": 82.98,
+                        "type": "scene",
+                        "text": "前往展厅7",
+                        "sceneId": "全景7"
+                    },
+                    {
+                        "pitch": -11.33,
+                        "yaw": 84.15,
+                        "type": "scene",
+                        "text": "前往展厅8",
+                        "sceneId": "全景8"
+                    }
+                ]
+            },
+        }
+    });
 </script>
 </body>
 </html>
