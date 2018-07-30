@@ -23,19 +23,30 @@
 <!--document.body.addEventListener('touchstart', function () { });-->
 <!--</script>-->
 <script>
+    var autoLoad;
+    var firstScene;
+    // parse url here
+    var url = location.search;  // strings after '?' ,but '?' included
+    if (url != '') {
+        autoLoad = true;
+        firstScene = "scene" + url.slice(7, 8);
+    } else {
+        autoLoad = false;
+        firstScene = 'scene1';
+    }
 
     pannellum.viewer('container', {
         "default": {
             "preview": "../../files/preview.png",
-            // "autoLoad": true,
-            "firstScene": "全景1",
+            "autoLoad": autoLoad,
+            "firstScene": firstScene,
             "sceneFadeDuration": 2000,
             "orientationOnByDefault": true,
-            // "hotSpotDebug": true
+            "hotSpotDebug": true
         },
         "scenes": {
 
-            "全景1": {
+            "scene1": {
                 "type": "multires",
                 "pitch": -8.5,
                 "yaw": -34.5,
@@ -54,26 +65,26 @@
                         "yaw": 27.86,
                         "type": "scene",
                         "text": "前往展厅2",
-                        "sceneId": "全景2"
+                        "sceneId": "scene2"
                     },
                     {
                         "pitch": -16.93,
                         "yaw": 3.02,
                         "type": "scene",
                         "text": "前往展厅4",
-                        "sceneId": "全景4"
+                        "sceneId": "scene4"
                     },
                     // {
                     //     "pitch": -9.90,
                     //     "yaw": 2.51,
                     //     "type": "scene",
                     //     "text": "前往展厅6",
-                    //     "sceneId": "全景6"
+                    //     "sceneId": "scene6"
                     // }
                 ]
             },
 
-            "全景2": {
+            "scene2": {
                 "type": "multires",
                 "pitch": 0,
                 "yaw": 0,
@@ -92,40 +103,40 @@
                         "yaw": -84.63,
                         "type": "scene",
                         "text": "前往展厅1",
-                        "sceneId": "全景1"
+                        "sceneId": "scene1"
                     },
                     {
                         "pitch": -13.33,
                         "yaw": 85.77,
                         "type": "scene",
                         "text": "前往展厅3",
-                        "sceneId": "全景3"
+                        "sceneId": "scene3"
                     },
                     {
                         "pitch": -16.64,
                         "yaw": -44.56,
                         "type": "scene",
                         "text": "前往展厅4",
-                        "sceneId": "全景4"
+                        "sceneId": "scene4"
                     },
                     {
                         "pitch": -15.04,
                         "yaw": 39.83,
                         "type": "scene",
                         "text": "前往展厅5",
-                        "sceneId": "全景5"
+                        "sceneId": "scene5"
                     },
                     {
                         "pitch": -8.20,
                         "yaw": -40.85,
                         "type": "scene",
                         "text": "前往展厅7",
-                        "sceneId": "全景7"
+                        "sceneId": "scene7"
                     }
                 ]
             },
 
-            "全景3": {
+            "scene3": {
                 "type": "multires",
                 "pitch": 2.387,
                 "yaw": 140.61,
@@ -140,30 +151,36 @@
                 },
                 "hotSpots": [
                     {
+                        "pitch": 5.50,
+                        "yaw": 129.72,
+                        "type": "info",
+                        "URL": "../../files/intro/VTM.jpg"
+                    },
+                    {
                         "pitch": -12.66,
                         "yaw": -26.47,
                         "type": "scene",
                         "text": "前往展厅2",
-                        "sceneId": "全景2"
+                        "sceneId": "scene2"
                     },
                     {
                         "pitch": -19.44,
                         "yaw": 17.43,
                         "type": "scene",
                         "text": "前往展厅5",
-                        "sceneId": "全景5"
+                        "sceneId": "scene5"
                     },
                     {
                         "pitch": -7.88,
                         "yaw": 7.87,
                         "type": "scene",
                         "text": "前往展厅6",
-                        "sceneId": "全景6"
+                        "sceneId": "scene6"
                     }
                 ]
             },
 
-            "全景4": {
+            "scene4": {
                 "type": "multires",
                 "pitch": -5.45,
                 "yaw": 0.58,
@@ -181,47 +198,47 @@
                         "pitch": 0,
                         "yaw": 0,
                         "type": "info",
-                        "URL": "../../pages/screen2.html"
+                        "URL": "../../pages/screen1.html"
                     },
                     {
                         "pitch": -14.02,
                         "yaw": 132.99,
                         "type": "scene",
                         "text": "前往展厅1",
-                        "sceneId": "全景1"
+                        "sceneId": "scene1"
                     },
                     {
                         "pitch": -16.01,
                         "yaw": 38.02,
                         "type": "scene",
                         "text": "前往展厅2",
-                        "sceneId": "全景2"
+                        "sceneId": "scene2"
                     },
                     {
                         "pitch": -15.16,
                         "yaw": -36.48,
                         "type": "scene",
                         "text": "前往展厅6",
-                        "sceneId": "全景6"
+                        "sceneId": "scene6"
                     },
                     {
                         "pitch": -22.63,
                         "yaw": -112.32,
                         "type": "scene",
                         "text": "前往展厅7",
-                        "sceneId": "全景7"
+                        "sceneId": "scene7"
                     },
                     {
                         "pitch": -16.21,
                         "yaw": -138.89,
                         "type": "scene",
                         "text": "前往展厅8",
-                        "sceneId": "全景8"
+                        "sceneId": "scene8"
                     }
                 ]
             },
 
-            "全景5": {
+            "scene5": {
                 "type": "multires",
                 "pitch": -4.27,
                 "yaw": 0.54,
@@ -239,33 +256,33 @@
                         "pitch": 0,
                         "yaw": 0,
                         "type": "info",
-                        "URL": "../../pages/screen1.html"
+                        "URL": "../../pages/screen2.html"
                     },
                     {
                         "pitch": -14.63,
                         "yaw": -30.43,
                         "type": "scene",
                         "text": "前往展厅2",
-                        "sceneId": "全景2"
+                        "sceneId": "scene2"
                     },
                     {
                         "pitch": -22.95,
                         "yaw": -108.69,
                         "type": "scene",
                         "text": "前往展厅3",
-                        "sceneId": "全景3"
+                        "sceneId": "scene3"
                     },
                     {
                         "pitch": -12.82,
                         "yaw": 33.46,
                         "type": "scene",
                         "text": "前往展厅6",
-                        "sceneId": "全景6"
+                        "sceneId": "scene6"
                     }
                 ]
             },
 
-            "全景6": {
+            "scene6": {
                 "type": "multires",
                 "pitch": 0,
                 "yaw": 0,
@@ -290,47 +307,47 @@
                     //     "yaw": 42.43,
                     //     "type": "scene",
                     //     "text": "前往展厅1",
-                    //     "sceneId": "全景1"
+                    //     "sceneId": "scene1"
                     // },
                     {
                         "pitch": -9.57,
                         "yaw": -39.83,
                         "type": "scene",
                         "text": "前往展厅3",
-                        "sceneId": "全景3"
+                        "sceneId": "scene3"
                     },
                     {
                         "pitch": -18.52,
                         "yaw": 36.54,
                         "type": "scene",
                         "text": "前往展厅4",
-                        "sceneId": "全景4"
+                        "sceneId": "scene4"
                     },
                     {
                         "pitch": -18.07,
                         "yaw": -39.75,
                         "type": "scene",
                         "text": "前往展厅5",
-                        "sceneId": "全景5"
+                        "sceneId": "scene5"
                     },
                     {
                         "pitch": -21.04,
                         "yaw": 82.98,
                         "type": "scene",
                         "text": "前往展厅7",
-                        "sceneId": "全景7"
+                        "sceneId": "scene7"
                     },
                     {
                         "pitch": -11.33,
                         "yaw": 84.15,
                         "type": "scene",
                         "text": "前往展厅8",
-                        "sceneId": "全景8"
+                        "sceneId": "scene8"
                     }
                 ]
             },
 
-            "全景7": {
+            "scene7": {
                 "type": "multires",
                 "pitch": 0,
                 "yaw": 0,
@@ -349,33 +366,33 @@
                         "yaw": -45.30,
                         "type": "scene",
                         "text": "前往展厅2",
-                        "sceneId": "全景2"
+                        "sceneId": "scene2"
                     },
                     {
                         "pitch": -21.15,
                         "yaw": -46.97,
                         "type": "scene",
                         "text": "前往展厅4",
-                        "sceneId": "全景4"
+                        "sceneId": "scene4"
                     },
                     {
                         "pitch": -14.77,
                         "yaw": -91.62,
                         "type": "scene",
                         "text": "前往展厅6",
-                        "sceneId": "全景6"
+                        "sceneId": "scene6"
                     },
                     {
                         "pitch": -30.99,
                         "yaw": 89.89,
                         "type": "scene",
                         "text": "前往展厅8",
-                        "sceneId": "全景8"
+                        "sceneId": "scene8"
                     }
                 ]
             },
 
-            "全景8": {
+            "scene8": {
                 "type": "multires",
                 "pitch": -5.48,
                 "yaw": -112.54,
@@ -394,21 +411,21 @@
                         "yaw": 6.22,
                         "type": "scene",
                         "text": "前往展厅4",
-                        "sceneId": "全景4"
+                        "sceneId": "scene4"
                     },
                     {
                         "pitch": -11.66,
                         "yaw": -27.22,
                         "type": "scene",
                         "text": "前往展厅6",
-                        "sceneId": "全景6"
+                        "sceneId": "scene6"
                     },
                     {
                         "pitch": -36.06,
                         "yaw": -26.43,
                         "type": "scene",
                         "text": "前往展厅7",
-                        "sceneId": "全景7"
+                        "sceneId": "scene7"
                     }
                 ]
             },
