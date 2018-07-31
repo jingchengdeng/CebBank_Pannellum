@@ -25,7 +25,7 @@
 <script>
     var autoLoad;
     var firstScene;
-    // parse url here
+    // parse url here "?scene=1"
     var url = location.search;  // strings after '?' ,but '?' included
     if (url.slice(1,7) == 'scene=') {
         autoLoad = true;
@@ -39,10 +39,11 @@
         "default": {
             "preview": "../../files/preview.png",
             "autoLoad": autoLoad,
-            "firstScene": firstScene,
+            // "firstScene": firstScene,
+            "firstScene": 'scene7',
             "sceneFadeDuration": 2000,
             "orientationOnByDefault": true,
-            // "hotSpotDebug": true
+            "hotSpotDebug": true
         },
         "scenes": {
 
@@ -150,12 +151,6 @@
                     "cubeResolution": 4000
                 },
                 "hotSpots": [
-                    {
-                        "pitch": 5.50,
-                        "yaw": 129.72,
-                        "type": "info",
-                        "URL": "../../pages/device1.html"
-                    },
                     {
                         "pitch": -12.66,
                         "yaw": -26.47,
@@ -406,6 +401,24 @@
                     "cubeResolution": 4000
                 },
                 "hotSpots": [
+                    {
+                        "pitch": 10.90,
+                        "yaw": -127.43,
+                        "type": "info",
+                        "URL": "../../pages/device.html?scene=8&device=0"
+                    },
+                    {
+                        "pitch": -3.42,
+                        "yaw": 37.56,
+                        "type": "info",
+                        "URL": "../../pages/device.html?scene=8&device=4"
+                    },
+                    {
+                        "pitch": -2.51,
+                        "yaw": 19.66,
+                        "type": "info",
+                        "URL": "../../pages/device.html?scene=8&device=5"
+                    },
                     {
                         "pitch": -14,
                         "yaw": 6.22,

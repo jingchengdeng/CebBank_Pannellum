@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>device1</title>
+    <title>device</title>
     <style>
         body {
             font-family: 'Merriweather', serif;
-            margin: 0px;
-            padding: 0px;
-
             overflow-x: hidden !important;
             background: #FFF;
-            color: #666
+            color: #666;
+            margin: 0;
         }
 
         img {
@@ -73,10 +71,32 @@
 </head>
 <body>
 <div class="image">
-    <a href="../files/intro/VTM.jpg"><img src="../files/intro/VTM.jpg"></a>
+    <a href="../files/intro/device0.jpg"><img src="../files/intro/device0.jpg"></a>
 </div>
 <div style="text-align: center; clear: both;">
-    <a class="button-big" href=../src/standalone/pannellum.html?scene=3>返回</a>
+    <a class="button-big" href=../src/standalone/pannellum.html>返回</a>
 </div>
+<script>
+    var url = location.search;
+    // pattern: "URL": "../../pages/device1.html?scene=8&device=1"
+    var target_device = '';
+    var target_scene = '';
+    var div_image = document.getElementsByClassName('image')[0];
+    var anchor_image = div_image.children[0];
+    var button = document.getElementsByTagName('div')[1].children[0];
+    console.log(url.slice(0, 8));
+    console.log(url.slice(8, 17));
+    if (url.slice(0, 7) == '?scene=' && url.slice(8, 16) == '&device=') {
+        target_scene = '../src/standalone/pannellum.html?scene=' + url.slice(7, 8);
+        button.setAttribute('href', target_scene);
+
+        target_device = '../files/intro/device' + url.slice(16, 17) + '.jpg';
+        console.log("target_device = " + target_device);
+        anchor_image.setAttribute('href', target_device);
+        anchor_image.children[0].setAttribute('src', target_device);
+    } else {
+        console.log('Cannot parse the url. It has to follow the pattern: ?scene=1&device=1');
+    }
+</script>
 </body>
 </html>
