@@ -27,10 +27,10 @@
     var firstScene;
     // parse url here
     var url = location.search;  // strings after '?' ,but '?' included
-    if (url != '') {
+    if (url.slice(1,7) == 'scene=') {
         autoLoad = true;
         firstScene = "scene" + url.slice(7, 8);
-    } else {
+    } else  {
         autoLoad = false;
         firstScene = 'scene1';
     }
@@ -42,7 +42,7 @@
             "firstScene": firstScene,
             "sceneFadeDuration": 2000,
             "orientationOnByDefault": true,
-            "hotSpotDebug": true
+            // "hotSpotDebug": true
         },
         "scenes": {
 
@@ -154,7 +154,7 @@
                         "pitch": 5.50,
                         "yaw": 129.72,
                         "type": "info",
-                        "URL": "../../files/intro/VTM.jpg"
+                        "URL": "../../pages/device1.html"
                     },
                     {
                         "pitch": -12.66,
