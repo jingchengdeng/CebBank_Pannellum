@@ -1,5 +1,13 @@
 
-# CebBank_Pannellum V0.7.0
+# CebBank_Pannellum V1.0.0
+
+### 更新 海报
+### 更新 tag v1.0.0
+### release v1.0.0
+
+=====================================
+
+## CebBank_Pannellum V0.7.0
 
 ### 加入 ESBU热点
 ### 删除 未启用热点
