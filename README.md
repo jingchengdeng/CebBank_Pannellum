@@ -1,5 +1,12 @@
 
-# CebBank_Pannellum V0.6.2
+# CebBank_Pannellum V0.7.0
+
+### 加入 ESBU热点
+### 删除 未启用热点
+
+=====================================
+
+## CebBank_Pannellum V0.6.2
 
 ### 修复 海报URL无法显示问题
 ### 更新 info.txt
