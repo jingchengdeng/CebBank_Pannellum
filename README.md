@@ -6,13 +6,13 @@
 
 =====================================
 
-# CebBank_Pannellum V0.6.1
+## CebBank_Pannellum V0.6.1
 
 ### 修复 移动端swipe box tool bar 双击问题
 
 =====================================
 
-# CebBank_Pannellum V0.6.0
+## CebBank_Pannellum V0.6.0
 
 ### 加入 设备介绍信息动态URL
 ### 修复 swipe box tool bar 系列问题
@@ -24,6 +24,8 @@
 ### 加入 更多VR视点
 ### 修复 FOV过大导致的画面变形问题
 ### 修复 移动端热点偏移问题
+### 由于加入更多VR视点，project文件过大
+### 所以后续修改抛弃branch，直接作用于master
 
 =====================================
 
