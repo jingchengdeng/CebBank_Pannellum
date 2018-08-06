@@ -1,0 +1,8 @@
+<!--index.wxml-->
+
+<view class="container">
+
+  <web-view src="https://devpron.test.cebbank.com/pannellum/src/standalone/pannellum.html">
+  </web-view>
+
+</view>
