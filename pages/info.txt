@@ -15,3 +15,5 @@ device6:    阳光惠生活          4
 device7:    智能柜台            3
 device8:    智能机器人          1
 device9:    智能客服            4
+device10:   介绍信息            1
+device11:   参展目录            5，6
