@@ -7,7 +7,7 @@ screen5: 光大区块链（未审）,企业客户360 (未审)
 
 device0:    VTM                8
 device1:    风控大屏            5
-device2:    高端客户在线视频     4
+device2:    高端客户在线视频     2
 device3:    人脸识别            2
 device4:    手机银行            7,8
 device5:    外拓pad            7,8
