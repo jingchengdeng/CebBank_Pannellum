@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>光大银行网上展厅</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="../swipebox/lib/ios-orientationchange-fix.js"></script>
+    <script src="../swipebox/lib/jquery-2.1.0.min.js"></script>
+    <script src="../swipebox/src/js/jquery.swipebox.js"></script>
+    <link rel="stylesheet" href="../swipebox/demo/normalize.css">
+    <link rel="stylesheet" href="../swipebox/demo/bagpakk.min.css">
+    <link rel="stylesheet" href="../swipebox/demo/style.css">
+    <link rel="stylesheet" href="../swipebox/src/css/swipebox.css">
+</head>
+<body>
+
+<section class="container">
+    <div class="wrap small-width">
+        <ul id="box-container">
+            <li class="box">
+                <a href="../files/posters/screen5/poster_5_1.jpg" class="swipebox" title="企业客户360">
+                    <img src="../files/posters/screen5/poster_5_1.jpg" alt="企业客户360海报">
+                </a>
+            </li>
+            <li class="box">
+                <a href="../files/posters/screen5/poster_5_2.jpg" class="swipebox" title="区块链">
+                    <img src="../files/posters/screen5/poster_5_2.jpg" alt="区块链海报">
+                </a>
+            </li>
+        </ul>
+        <div style="text-align: center; clear: both;">
+            <a class="button-big" href=../src/standalone/pannellum.html?scene=6>返回</a>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        /* Basic Gallery */
+        $('.swipebox').swipebox({
+            removeBarsOnMobile: false,
+
+        });
+
+
+    });
+</script>
+</body>
+</html>
