@@ -16,7 +16,7 @@
 
 <section class="container">
     <div class="wrap small-width">
-        <ul id="box-container">
+        <u id="box-container">
             <li class="box">
                 <a href="../files/posters/screen1/poster_1_1.jpg" class="swipebox" title="云缴费">
                     <img src="../files/posters/screen1/poster_1_1.jpg" alt="云缴费海报">
@@ -32,31 +32,28 @@
                     <img src="../files/posters/screen1/poster_1_3.jpg" alt="网络贷款海报">
                 </a>
             </li>
-        </u1>
+        </u>
             <div style="text-align: center; clear: both;">
                 <a class="button-big" href=../src/standalone/pannellum.html>返回</a>
             </div>
-            <script>
-                var url = location.search;
-                // pattern: "URL": "../../pages/screen1.html?scene=6"
-                var target_scene = '';
-
-                var button = document.getElementsByTagName('div')[1].children[0];
-                // console.log(url.slice(0, 8));
-                // console.log(url.slice(8, 17));
-                if (url.slice(0, 7) == '?scene=') {
-                    target_scene = '../src/standalone/pannellum.html?scene=' + url.slice(7, 8);
-                    button.setAttribute('href', target_scene);
-                    // button.setAttribute('onclick', 'window.destroy();'
-                } else {
-                    console.log('Cannot parse the url. It has to follow the pattern: ?scene=1');
-                }
-            </script>
     </div>
 </section>
 
-
 <script type="text/javascript">
+    var url = location.search;
+    // pattern: "URL": "../../pages/screen1.html?scene=6"
+    var target_scene = '';
+
+    var button = document.getElementsByTagName('div')[1].children[0];
+    // console.log(url.slice(0, 8));
+    // console.log(url.slice(8, 17));
+    if (url.slice(0, 7) == '?scene=') {
+        target_scene = '../src/standalone/pannellum.html?scene=' + url.slice(7, 8);
+        button.setAttribute('href', target_scene);
+        // button.setAttribute('onclick', 'window.destroy();'
+    } else {
+        console.log('Cannot parse the url. It has to follow the pattern: ?scene=1');
+    }
     $(document).ready(function () {
 
         /* Basic Gallery */
